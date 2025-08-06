@@ -35,8 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
       heroBac.style.backgroundImage = `url('${images[currentIndex]}')`;
     }
     
-    // Change background every 5 seconds
-    setInterval(changeBackground, 5000);
     
     // Navigation buttons
     const prevBtn = document.querySelector('.hero-nav button:first-child');
