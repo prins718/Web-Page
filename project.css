@@ -1,0 +1,177 @@
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: rgb(119, 138, 132);
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background-color: #333;
+  position: sticky;
+  color: #fff;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+#logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ded4d4;
+  font-size: 1rem;
+}
+
+nav ul li a.active {
+  font-weight: bold;
+}
+
+.main {
+  background: #1e8d83;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.main h1 {
+  margin: 0;
+  font-size: 2.8rem;
+}
+
+.main p {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projects {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 5%;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin: 0 0 10px;
+  color: #1e8d83;
+  font-size: 1.3rem;
+}
+
+.card-content p {
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+.card-content a {
+  color: #1e8d83;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.card-content a:hover {
+  color: #155e58;
+  text-decoration: underline;
+}
+footer {
+  background: #2e2f32;
+  color: #fff;
+  padding: 40px 5%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content > div {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-content img {
+  width: 100px;
+  margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  nav ul {
+    gap: 15px;
+    margin-top: 15px;
+    justify-content: center;
+  }
+  
+  .main h1 {
+    font-size: 2rem;
+  }
+  
+  .main p {
+    font-size: 1rem;
+  }
+  
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}

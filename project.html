@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Our Projects</title>
+  <link rel="stylesheet" href="project.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="window.location.href='demo1.html';">ArchiWeb</div>
+    <nav>
+      <ul>
+        <li><a href="demo1.html">Home</a></li>
+        <li><a href="project.html" class="active">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#"><i class="fas fa-search"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="main">
+    <h1>Our Projects</h1>
+    <p>Our standout portfolio—interior, exterior, furniture & architecture.</p>
+  </section>
+
+  <section class="projects">
+    <div class="project-grid">
+      <div class="card">
+        <img src="project1.png" alt="Modern Living Room">
+        <div class="card-content">
+          <h3>Modern Living Room</h3>
+          <p>A serene interior blending natural light, minimalist furniture, and soft textures.</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="project2.png" alt="Luxury Villa Exterior">
+        <div class="card-content">
+          <h3>Luxury Villa Exterior</h3>
+          <p>Clean-facing villa with expansive glass walls, a pool deck, and indoor-outdoor flow.</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="project3.png" alt="Urban Entryway Design">
+        <div class="card-content">
+          <h3>Urban Entryway Design</h3>
+          <p>Entry space with precise lighting, geometric finishes, and modern minimalist appeal.</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="project4.png" alt="Scandinavian Living Room">
+        <div class="card-content">
+          <h3>Scandinavian Living Room</h3>
+          <p>Soft tones, light woods, and open space create a calm and cozy living area.</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="project5.png" alt="Poolside Patio Retreat">
+        <div class="card-content">
+          <h3>Poolside Patio Retreat</h3>
+          <p>Aqua tiles, shaded loungers, and natural materials define this tranquil outdoor space.</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="project6.png" alt="Contemporary Kitchen">
+        <div class="card-content">
+          <h3>Contemporary Kitchen</h3>
+          <p>Clean cabinetry, matte accents, and smart layout combine form and function.</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="footer-content">
+      <div>
+        <h3>ArchiWeb</h3>
+        <p>Archiweb is an architectural consultant based in Berlin, Germany. We provide solutions for your architecture and residential design</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+          <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Articles</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li>7 Tips for Kids Friendly Interior</li>
+          <li>Smart Tips for Changing a Room</li>
+          <li>Eco-friendly design</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="demo1.html">Home</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Location</h4>
+        <div id="map" style="height: 150px; width: 150px; background: #ccc; margin: 0 auto;"></div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+  const map = L.map('map').setView([52.5200, 13.4050], 13); // Berlin
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  L.marker([52.5200, 13.4050]).addTo(map)
+    .bindPopup('ArchiWeb Office - Berlin')
+    .openPopup();
+</script>
+</body>
+</html>

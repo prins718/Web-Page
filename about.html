@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - ArchiWeb</title>
+  <link rel="stylesheet" href="about.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+</head>
+<body>
+  <header class="header">
+    <div id="logo" onclick="window.location.href='demo1.html';">ArchiWeb</div>
+    <nav>
+      <ul>
+        <li><a href="demo1.html">Home</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#"><i class="fas fa-search"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="about-hero">
+    <div class="overlay">
+      <h1>About ArchiWeb</h1>
+      <p>Timeless. Thoughtful. Transformative Design.</p>
+    </div>
+  </section>
+
+  <section class="about-info">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4">
+          <img src="about.png" alt="Studio" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+          <h2>Our Story</h2>
+          <p>Founded in Berlin, ArchiWeb is a creative architecture and design studio focused on functionality, style, and sustainability. We work on residential, commercial, and bespoke projects that reflect your identity and values.</p>
+          <p>With a team of passionate architects and designers, we turn ideas into immersive spaces through a collaborative and personalized process. We believe great design inspires, supports well-being, and endures over time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mission-section">
+    <div class="container text-center">
+      <h2>Our Mission</h2>
+      <p class="lead">To create meaningful spaces that enhance daily life and connect people to their environment.</p>
+    </div>
+  </section>
+
+  <section class="team-section">
+    <div class="container text-center">
+      <h2>Meet Our Team</h2>
+      <div class="row mt-4">
+        <div class="col-md-4 mb-4">
+          <img src="james.png" class="rounded-circle mb-2" width="120" alt="Team Member">
+          <h3>James Passaquindici</h3>
+          <h5>Founder & Principal Architect</h5>
+          <p>"The design team brought my vision to life. Their attention to detail created a home that truly reflects who I am."</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="abram.png" class="rounded-circle mb-2" width="120" alt="Team Member">
+          <h3>Abram Schleifer</h3>
+          <h5>Lead Designer</h5>
+          <p>"Working with the team transformed my ideas into a refined, living space. The attention to every detail made all the difference."</p>
+        </div>
+        <div class="col-md-4 mb-4">
+      <img src="jane.png" alt="Jane Doe">
+      <h4>Jane Doe</h4>
+      <h5>Interior Design Consultant</h5>
+      <p>"The team delivered beyond expectations. Every corner of our space now reflects harmony and functionality. Truly a remarkable experience!"</p>
+    </div>
+       
+      </div>
+    </div>
+  </section>
+
+ <footer id="footer">
+    <div class="footer-content">
+      <div>
+        <h3>ArchiWeb</h3>
+        <p>Archiweb is an architectural consultant based in Berlin, Germany. We provide solutions for your architecture and residential design</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+          <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Articles</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li>7 Tips for Kids Friendly Interior</li>
+          <li>Smart Tips for Changing a Room</li>
+          <li>Eco-friendly design</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="demo1.html">Home</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Location</h4>
+        <div id="map" style="height: 150px; width: 150px; background: #ccc; margin: 0 auto;"></div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+  const map = L.map('map').setView([52.5200, 13.4050], 13); // Berlin
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  L.marker([52.5200, 13.4050]).addTo(map)
+    .bindPopup('ArchiWeb Office - Berlin')
+    .openPopup();
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
